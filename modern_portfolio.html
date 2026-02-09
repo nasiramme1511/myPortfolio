@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasir Amme | Modern Portfolio</title>
+    <!-- Additional meta tags for better SEO and social sharing -->
+    <meta name="keywords" content="web developer, software engineer, portfolio, javascript, react, nodejs">
+    <meta name="author" content="Nasir Amme">
+    <meta name="theme-color" content="#4f46e5">
+    <meta name="description" content="Nasir Amme - Full Stack Developer & Software Engineer. Building modern web applications with cutting-edge technologies.">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Nasir Amme | Modern Portfolio">
+    <meta property="og:description" content="Building modern web applications with cutting-edge technologies">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nasiramme1511.github.io/myPortfolio/">
+    <meta property="og:image" content="https://nasiramme1511.github.io/myPortfolio/profile.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nasir Amme | Modern Portfolio">
+    <meta name="twitter:description" content="Building modern web applications with cutting-edge technologies">
+    <meta name="twitter:image" content="https://nasiramme1511.github.io/myPortfolio/profile.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- External Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="modern_styles.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header id="header" class="header">
+        <nav class="navbar">
+            <a href="#home" class="logo">Nasir Amme</a>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#testimonials" class="nav-link">Testimonials</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Hey there! I'm <span class="highlight">Nasir</span></h1>
+                    <h2 class="hero-subtitle"><span id="typed-text"></span><span class="cursor">|</span></h2>
+                    <p class="hero-description">
+                        Passionate Full Stack Developer & Software Engineer who loves turning ideas into reality. I craft digital experiences that make people go "wow!" with modern tech.
+                    </p>
+                    <div class="hero-btns">
+                        <a href="#projects" class="btn btn-primary">Check Out My Work</a>
+                        <a href="Nasir_Amme_CV.pdf" class="btn btn-secondary" download>Grab My Resume</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number" data-target="50">0</span>+
+                            <p>Happy Clients</p>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="80">0</span>+
+                            <p>Projects Done</p>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="5">0</span>+
+                            <p>Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-container">
+                        <img src="profile.jpg" alt="Nasir Amme" class="profile-img">
+                        <div class="circle circle-1"></div>
+                        <div class="circle circle-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>What I Do</h3>
+                    <p>
+                        Hey! I'm a Software Engineering student at Dire Dawa University, and I absolutely love building stuff that matters. 
+                        I'm all about creating responsive, user-friendly web apps that actually work well. Whether it's the frontend or backend, 
+                        I enjoy tackling both sides of the development process.
+                    </p>
+                    <p>
+                        I'm always looking to level up my skills and work on projects that make a real difference. 
+                        Solving complex problems and turning ideas into reality? That's my jam!
+                    </p>
+                    
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h4>8+</h4>
+                            <p>Projects</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>3+</h4>
+                            <p>Years Exp</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>100%</h4>
+                            <p>Success Rate</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-info">
+                    <h3>Education & Journey</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h4>Software Engineering Student</h4>
+                            <p class="company">Dire Dawa University</p>
+                            <p class="date">2020 - Present</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>Full Stack Developer</h4>
+                            <p class="company">Self-Taught & Online Courses</p>
+                            <p class="date">2019 - Present</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>Web Development</h4>
+                            <p class="company">Various Certifications</p>
+                            <p class="date">2020 - Present</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2>What I'm Good At</h2>
+                <div class="section-line"></div>
+                <p>Here's the tech I rock at! From frontend magic to backend wizardry, I've got the skills to bring your vision to life.</p>
+            </div>
+            
+            <div class="skills-content">
+                <div class="skills-column">
+                    <h3>Frontend Development</h3>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>HTML5 & CSS3</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>JavaScript</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>React.js</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Vue.js</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="80%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-column">
+                    <h3>Backend Development</h3>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Node.js</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="88%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Python</span>
+                            <span>82%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="82%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Express.js</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>MongoDB</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="80%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-column">
+                    <h3>Other Technologies</h3>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Git & GitHub</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Docker</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>AWS</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="70%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>CI/CD</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="75%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2>Work Experience</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>Full Stack Developer</h4>
+                    <p class="company">Tech Solutions Inc.</p>
+                    <p class="date">Jan 2023 - Present</p>
+                    <p class="description">Developing full-stack applications using React, Node.js, and MongoDB. Collaborating with cross-functional teams to deliver high-quality products.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Frontend Developer</h4>
+                    <p class="company">Digital Agency</p>
+                    <p class="date">Jun 2022 - Dec 2022</p>
+                    <p class="description">Created responsive web applications using React and Vue.js. Implemented UI/UX designs with pixel-perfect accuracy.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Web Development Intern</h4>
+                    <p class="company">StartupXYZ</p>
+                    <p class="date">Jan 2022 - May 2022</p>
+                    <p class="description">Assisted in developing and maintaining web applications. Gained hands-on experience with modern development tools and practices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Some Cool Stuff I've Built</h2>
+                <div class="section-line"></div>
+                <p>Check out some of the projects I've worked on. Each one taught me something new and helped me become a better developer.</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/school-system.png" alt="Educational Institution Management Platform">
+                    </div>
+                    <div class="project-content">
+                        <h3>Educational Institution Management Platform</h3>
+                        <p>A comprehensive full-stack solution for educational institutions featuring role-based dashboards for administrators, educators, and students.</p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Responsive</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/nasiramme1511/school-system" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/quiz-app.png" alt="Advanced Assessment Platform">
+                    </div>
+                    <div class="project-content">
+                        <h3>Advanced Assessment Platform</h3>
+                        <p>An interactive evaluation system featuring timed assessments, comprehensive scoring algorithms, and diverse subject categorization.</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>Chart.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/nasiramme1511/quiz-app" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://your-quiz-demo.netlify.app" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/alarm-clock.png" alt="Sophisticated Time Management Solution">
+                    </div>
+                    <div class="project-content">
+                        <h3>Sophisticated Time Management Solution</h3>
+                        <p>A comprehensive time management application offering multiple customizable alarms, personalized audio configurations, and advanced sleep pattern analysis.</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>Audio API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/nasiramme1511/alarm-clock" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://your-alarm-demo.netlify.app" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Client Testimonials</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Nasir delivered exceptional work on our web application. His attention to detail and technical expertise exceeded our expectations."</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="client-info">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client">
+                        <div class="client-details">
+                            <h4>John Smith</h4>
+                            <p>CEO, Tech Solutions</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Working with Nasir was a great experience. He understood our requirements perfectly and delivered on time."</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <div class="client-info">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client">
+                        <div class="client-details">
+                            <h4>Sarah Johnson</h4>
+                            <p>Project Manager, Innovate Inc</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The quality of work is outstanding. Nasir's technical skills and professionalism are impressive."</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="client-info">
+                        <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Client">
+                        <div class="client-details">
+                            <h4>Michael Brown</h4>
+                            <p>CTO, Digital Ventures</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Let's Chat!</h2>
+                <div class="section-line"></div>
+                <p>Got a project in mind or just want to say hi? Drop me a line and I'll get back to you ASAP!</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <a href="mailto:nasiramme1511@gmail.com">nasiramme1511@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <a href="tel:+251996656617">+251996656617</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Dire Dawa, Ethiopia</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/nasiramme1511" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/nasiramme1511" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://twitter.com/nasiramme1511" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://nasiramme1511.dev" target="_blank"><i class="fas fa-globe"></i></a>
+                        <a href="https://t.me/nasiramme1511" target="_blank"><i class="fab fa-telegram"></i></a>
+                        <a href="https://www.youtube.com/@NasirAmme-h4o" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Nasir Amme</h3>
+                    <p>Full Stack Developer & Software Engineer</p>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Nasir Amme. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll To Top Button -->
+    <button id="scrollToTop" class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Main JavaScript -->
+    <script src="modern_script.js"></script>
+</body>
+</html>

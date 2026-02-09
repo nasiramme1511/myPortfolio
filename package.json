@@ -1,0 +1,38 @@
+{
+  "name": "nasir-amme-portfolio",
+  "version": "1.0.0",
+  "description": "Professional portfolio website for Nasir Amme - Full Stack Developer & Software Engineer",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server -o",
+    "dev": "live-server --open=index.html",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo \"Build process not required for static site\"",
+    "deploy": "gh-pages -d ."
+  },
+  "keywords": [
+    "portfolio",
+    "frontend",
+    "javascript",
+    "html",
+    "css",
+    "responsive",
+    "fullstack",
+    "developer"
+  ],
+  "author": "Nasir Amme",
+  "license": "MIT",
+  "devDependencies": {
+    "gh-pages": "^6.1.1",
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nasiramme1511/myPortfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nasiramme1511/myPortfolio/issues"
+  },
+  "homepage": "https://nasiramme1511.github.io/myPortfolio/"
+}
