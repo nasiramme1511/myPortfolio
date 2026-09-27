@@ -2,7 +2,7 @@ import React from 'react';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { projectsData } from '@/lib/data/projects';
-import { Github, ExternalLink, ArrowLeft, ShieldCheck, Database, Server, Cpu, CheckCircle2, AlertTriangle, Lightbulb, Rocket } from 'lucide-react';
+import { Github, ExternalLink, ArrowLeft, ShieldCheck, Database, Server, Cpu, CheckCircle2, AlertTriangle, Lightbulb, Rocket, Download } from 'lucide-react';
 
 interface PageProps {
   params: {
@@ -79,6 +79,16 @@ export default function ProjectCaseStudyPage({ params }: PageProps) {
               >
                 <ExternalLink className="w-4 h-4" />
                 Live Application Demo
+              </a>
+            )}
+            {project.slug === 'mcms' && (
+              <a
+                href="/mcms_sample_template.xlsx"
+                download="mcms_sample_template.xlsx"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 font-mono text-xs font-semibold border border-emerald-500/40 transition-all"
+              >
+                <Download className="w-4 h-4" />
+                Download Sample Excel Template
               </a>
             )}
           </div>

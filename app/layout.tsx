@@ -16,10 +16,18 @@ const jetbrainsMono = JetBrains_Mono({
   display: 'swap',
 });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  'https://nasir-amme-portfolio.vercel.app';
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://nasiramme1511.github.io/myPortfolio'),
-  title: 'Nasir Amme | Full-Stack Software Engineer',
-  description: 'Full-Stack Software Engineer and Software Engineering student at Dire Dawa University. Building modern, secure, and production-ready web applications.',
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: 'Nasir Amme | Full-Stack Software Engineer',
+    template: '%s | Nasir Amme',
+  },
+  description:
+    'Full-Stack Software Engineer and Software Engineering student at Dire Dawa University. Building modern, secure, and production-ready web applications.',
   keywords: [
     'Nasir Amme',
     'Full Stack Developer',
@@ -40,8 +48,9 @@ export const metadata: Metadata = {
   creator: 'Nasir Amme',
   openGraph: {
     title: 'Nasir Amme | Full-Stack Software Engineer',
-    description: 'Building modern, secure, scalable and production-ready web applications.',
-    url: 'https://nasiramme1511.github.io/myPortfolio/',
+    description:
+      'Building modern, secure, scalable and production-ready web applications.',
+    url: siteUrl,
     siteName: 'Nasir Amme Portfolio',
     images: [
       {
@@ -57,7 +66,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Nasir Amme | Full-Stack Software Engineer',
-    description: 'Building modern, secure, scalable and production-ready web applications.',
+    description:
+      'Building modern, secure, scalable and production-ready web applications.',
     images: ['/profile.jpg'],
   },
   robots: {

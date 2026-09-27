@@ -3,7 +3,9 @@ import { projectsData } from '@/lib/data/projects';
 import { blogPosts } from '@/lib/data/blog';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://nasiramme1511.github.io/myPortfolio';
+  const baseUrl =
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    'https://nasir-amme-portfolio.vercel.app';
 
   const routes = [
     '',

@@ -1,172 +1,122 @@
-# 🌐 Nasir Amme — Full-Stack Software Engineer Portfolio & Case Studies
+# Nasir Amme - Full-Stack Software Engineer Portfolio
 
-[![Production Build & Verification](https://github.com/nasiramme1511/myPortfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/nasiramme1511/myPortfolio/actions)
-![Next.js](https://img.shields.io/badge/Next.js-14.2-black?style=flat&logo=next.js)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.5-blue?style=flat&logo=typescript)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38bdf8?style=flat&logo=tailwind-css)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
+A production-grade personal engineering portfolio built with Next.js 14 (App Router), TypeScript, and Tailwind CSS. 
 
-> **Professional Positioning**: *"Building modern, secure, scalable and production-ready web applications."*
+This repository replaces a previous static HTML/JS portfolio with a modern, component-driven React architecture designed to showcase complex backend engineering projects, architectural case studies, and professional experience.
 
-This repository houses the personal full-stack software engineering portfolio and system architecture showcase for **Nasir Amme Siraj** — Software Engineering student at **Dire Dawa University** and Junior Web Developer intern alumnus at **Afronex Tech Hub**.
+## Live Application
+**[nasir-amme-portfolio.vercel.app](https://nasir-amme-portfolio.vercel.app)**
 
 ---
 
-## ⚡ Key Highlights & Features
+## 🏗️ Technical Architecture & Stack
 
-- **Modern Dark-First Engineering Aesthetic**: Clean visual hierarchy, code-inspired typography, subtle micro-interactions, and accessible high-contrast UI (no generic templates or fake percentage bars).
-- **In-Depth Architectural Case Studies**: Complete technical breakdowns for **OMMS** (Multi-tenant management system), **MCMS** (Financial fee engine & bulk Excel stream parser), and **Sheikh Muhammed Zabuur** (Media archive platform).
-- **Dedicated Engineering Specification Page (`/engineering`)**: Transparent documentation on frontend layering, backend MVC services, relational database normalization (3NF), JWT/RBAC security guards, testing strategies, performance Web Vitals tuning, and DevOps CI/CD pipelines.
-- **Server-Side Validated Contact System**: Secure Next.js API endpoint (`/api/contact`) with Zod schema validation, input sanitization, and rate-limit defense.
-- **Cached GitHub Integration (`/api/github`)**: Server-side fetch with Next.js revalidation cache (`revalidate: 3600`) displaying verified public repositories without exposing private API keys.
-- **Preserved Authentic CV & Profile Assets**: Direct web view and download trigger for `Nasir_Amme_CV.pdf` and real profile photo.
-- **100% SEO & Accessibility Ready**: Complete OpenGraph, Twitter card metadata, dynamic XML `sitemap.ts`, `robots.ts`, semantic landmarks, and keyboard focus states.
+- **Framework**: Next.js 14 (App Router, Server Components)
+- **Language**: TypeScript (Strict Mode)
+- **Styling**: Tailwind CSS, Lucide React (Icons)
+- **Data Validation**: Zod
+- **Email Delivery**: Resend API
+- **Testing**: Vitest, React Testing Library
+- **Deployment**: Vercel
+- **CI/CD**: GitHub Actions (Linting, Typechecking, Vitest, Build Validation)
 
----
+## ✨ Core Features
 
-## 🛠 Tech Stack
-
-### Frontend
-- **Framework**: [Next.js 14 (App Router)](https://nextjs.org)
-- **Language**: [TypeScript (Strict Mode)](https://www.typescriptlang.org)
-- **UI & Styling**: [React 18](https://react.dev), [Tailwind CSS](https://tailwindcss.com), [Lucide Icons](https://lucide.dev)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/)
-
-### Backend & Integrations
-- **API Engine**: Next.js App Router Server Routes
-- **Validation**: [Zod Schema Validation](https://zod.dev)
-- **Integrations**: GitHub REST API v3 (Cached)
-
-### Quality & Deployment
-- **Testing**: [Vitest](https://vitest.dev), [React Testing Library](https://testing-library.com)
-- **CI/CD**: GitHub Actions (`.github/workflows/ci.yml`)
-- **Deployment**: Vercel Ready (`vercel.json`)
+1. **Engineering Case Studies**: Detailed breakdowns of real multi-tenant management systems (OMMS), financial fee tracking software (MCMS), and digital media archives.
+2. **Server-Side Security**: Configured Content Security Policy (CSP), HTTP Strict Transport Security (HSTS), Frame Options, and standard security headers via `next.config.js`.
+3. **Contact Delivery**: Secure server-side validation using Zod and email delivery via Resend, including in-memory IP rate-limiting.
+4. **Automated Testing**: Unit and component testing using Vitest to ensure profile, project, and routing data integrity.
+5. **SEO & Accessibility**: Complete static metadata, OpenGraph tags, semantic HTML, and dynamic sitemap generation.
 
 ---
 
-## 📐 Architecture & Folder Structure
+## 📂 Folder Structure
 
 ```text
 myPortfolio/
-├── app/
-│   ├── api/
-│   │   ├── contact/route.ts      # Server-side Zod form validation
-│   │   └── github/route.ts       # Cached GitHub stats proxy
-│   ├── about/page.tsx            # Journey & DDU Education details
-│   ├── blog/                     # Technical articles & dynamic [slug]
-│   ├── contact/page.tsx          # Contact view
-│   ├── engineering/page.tsx      # System architecture & specs
-│   ├── experience/page.tsx       # Afronex Tech Hub internship timeline
-│   ├── projects/                 # Systems showcase & case studies [slug]
-│   ├── resume/page.tsx           # Interactive web resume + PDF download
-│   ├── skills/page.tsx           # Tech stack & learning direction
-│   ├── globals.css               # Tailwind directives & focus states
-│   ├── layout.tsx                # Root layout, metadata & fonts
-│   ├── page.tsx                  # Homepage
-│   ├── robots.ts                 # Dynamic robots.txt
-│   └── sitemap.ts                # Dynamic XML sitemap
-├── components/
-│   ├── AboutSection.tsx          # Background summary component
-│   ├── ContactForm.tsx           # Interactive contact form
-│   ├── Footer.tsx                # Sitemap & social footer
-│   ├── Hero.tsx                  # Hero section with CTA buttons
-│   ├── Navbar.tsx                # Sticky navbar & mobile drawer
-│   ├── ProjectCard.tsx           # Project card component
-│   └── SkillsGrid.tsx            # Categorized skills matrix
-├── lib/
-│   ├── data/
-│   │   ├── blog.ts               # Technical articles dataset
-│   │   ├── engineering.ts        # Architecture & security specifications
-│   │   ├── profile.ts            # Profile dataset
-│   │   └── projects.ts           # Case studies dataset
-│   └── github.ts                 # Server-side GitHub API client
-├── public/
-│   ├── profile.jpg               # Official profile photo
-│   └── Nasir_Amme_CV.pdf         # Official PDF Resume
-├── tests/
-│   └── portfolio.test.tsx        # Vitest component & data tests
-├── .github/workflows/ci.yml      # CI pipeline script
-├── next.config.js                # Next.js security headers & image config
-├── tailwind.config.js            # Design tokens & color system
-├── tsconfig.json                 # TypeScript strict compiler options
-├── vercel.json                   # Vercel deployment manifest
-└── package.json                  # Scripts & dependencies
+├── app/                  # Next.js 14 App Router pages and layouts
+│   ├── api/              # Serverless API routes (e.g., Contact Form)
+│   ├── about/            # Professional background and education
+│   ├── blog/             # Technical engineering articles
+│   ├── engineering/      # Architecture, security, and DevOps principles
+│   ├── experience/       # Internship and professional work history
+│   ├── projects/         # Engineering project case studies
+│   └── resume/           # Printable web resume
+├── components/           # Reusable React components (UI, Forms, Cards)
+├── lib/                  # Shared utilities and data access
+│   ├── data/             # Statically typed TS data (Projects, Profile, Blog)
+│   └── github.ts         # GitHub API integration wrapper
+├── public/               # Static assets (Images, Resumes, Sample Excel templates)
+├── scripts/              # Build scripts (e.g., sample data generation)
+└── tests/                # Vitest test suites
 ```
 
 ---
 
-## 🚀 Local Development Setup
+## 🚀 Local Development
 
-### Prerequisites
-- **Node.js**: v18.0.0 or higher
-- **npm**: v9.0.0 or higher
+### 1. Prerequisites
+- Node.js 20+
+- npm or yarn
 
-### Steps
+### 2. Environment Variables
+Copy the `.env.example` file to create a local `.env.local`:
+```bash
+cp .env.example .env.local
+```
+Fill in the necessary credentials:
+- `RESEND_API_KEY`: API key for sending contact form emails.
+- `CONTACT_EMAIL`: The destination email address for form submissions.
+- `NEXT_PUBLIC_SITE_URL`: Your local or production base URL.
+- `GITHUB_TOKEN`: (Optional) For higher rate limits on GitHub stats fetching.
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/nasiramme1511/myPortfolio.git
-   cd myPortfolio
-   ```
+### 3. Installation & Setup
+```bash
+# Install dependencies
+npm install
 
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
-
-3. **Configure Environment Variables (Optional)**:
-   Copy `.env.example` to `.env.local`:
-   ```bash
-   cp .env.example .env.local
-   ```
-
-4. **Start local development server**:
-   ```bash
-   npm run dev
-   ```
-   Open `http://localhost:3000` in your browser.
+# Run the development server
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-## 🧪 Testing & Verification Scripts
+## 🧪 Testing & Verification
 
-- **Run Unit & Component Tests**:
-  ```bash
-  npm run test
-  ```
+The project enforces strict type checking and automated tests to ensure production stability.
 
-- **Run TypeScript Type Checking**:
-  ```bash
-  npm run typecheck
-  ```
+```bash
+# Run ESLint validation
+npm run lint
 
-- **Run ESLint Code Audit**:
-  ```bash
-  npm run lint
-  ```
+# Run TypeScript static analysis without emitting files
+npm run typecheck
 
-- **Production Build Test**:
-  ```bash
-  npm run build
-  ```
+# Execute Vitest test suite
+npm run test
+
+# Create a production build locally
+npm run build
+```
 
 ---
 
-## 📦 Deployment Configuration
+## ⚙️ Continuous Integration (CI/CD)
 
-This application is optimized for zero-config production deployment on **Vercel**:
+The repository uses **GitHub Actions** (`.github/workflows/ci.yml`) to automatically validate every push and pull request to the `main` branch. The CI pipeline executes the following steps in a clean Ubuntu environment:
+1. Installs Node 20 & Dependencies
+2. Runs ESLint checks
+3. Validates TypeScript types
+4. Executes the Vitest test suite
+5. Attempts a Next.js production build
 
-1. Import `nasiramme1511/myPortfolio` into your Vercel dashboard.
-2. Vercel automatically detects Next.js 14 settings from `package.json` and `vercel.json`.
-3. Optionally add `GITHUB_TOKEN` in Vercel environment variables for higher GitHub API rate limits.
-4. Click **Deploy**.
+Code is only considered safe to deploy if all checks pass. Vercel handles the production deployments automatically upon a successful push.
 
 ---
 
-## 📄 License & Contact
+## 👨‍💻 Author
 
-- **Author**: Nasir Amme Siraj
-- **Email**: nasiramme1511@gmail.com
-- **LinkedIn**: [linkedin.com/in/nasir-amme-9a29a7340](https://www.linkedin.com/in/nasir-amme-9a29a7340)
-- **GitHub**: [github.com/nasiramme1511](https://github.com/nasiramme1511)
-- **License**: [MIT License](LICENSE)
+**Nasir Amme**  
+*Full-Stack Web Developer & Software Engineering Student*  
+[LinkedIn](https://www.linkedin.com/in/nasir-amme-9a29a7340) | [GitHub](https://github.com/nasiramme1511)
