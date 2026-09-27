@@ -47,11 +47,11 @@ export function Navbar() {
           href="/"
           className="flex items-center gap-2.5 group font-mono text-lg font-bold text-white tracking-tight"
         >
-          <div className="w-9 h-9 rounded-lg bg-brand-600/20 border border-brand-500/40 flex items-center justify-center text-brand-400 group-hover:bg-brand-600 group-hover:text-white transition-all duration-300">
+          <div className="w-9 h-9 rounded-lg bg-brand-600/20 border border-brand-500/40 flex items-center justify-center text-brand-400 group-hover:bg-gradient-to-br group-hover:from-brand-500 group-hover:to-amber-500 group-hover:border-amber-400/50 group-hover:text-white transition-all duration-500 shadow-[0_0_10px_rgba(223,156,27,0)] group-hover:shadow-[0_0_15px_rgba(223,156,27,0.4)]">
             <Terminal className="w-5 h-5" />
           </div>
-          <span>
-            NASIR <span className="text-brand-400">AMME</span>
+          <span className="group-hover:text-brand-100 transition-colors duration-300">
+            NASIR <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-amber-300">AMME</span>
           </span>
         </Link>
 
@@ -63,9 +63,9 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`px-4 py-1.5 text-xs font-medium rounded-full transition-all duration-200 ${
+                className={`px-4 py-1.5 text-xs font-medium rounded-full transition-all duration-300 ${
                   isActive
-                    ? 'bg-brand-600 text-white shadow-sm'
+                    ? 'bg-gradient-to-r from-brand-600 to-brand-500 text-white shadow-[0_2px_10px_rgba(223,156,27,0.3)]'
                     : 'text-slate-300 hover:text-white hover:bg-surface-100/60'
                 }`}
               >

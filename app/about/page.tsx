@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { profileData } from '@/lib/data/profile';
 import { GraduationCap, Briefcase, Code2, Server, Database, ShieldCheck, ArrowRight, Download, FileText } from 'lucide-react';
 
@@ -20,7 +21,7 @@ export default function AboutPage() {
             <span>{"// Professional Profile"}</span>
           </div>
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">
-            About <span className="text-brand-400">Nasir Amme</span>
+            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-300 to-brand-500">Nasir Amme</span>
           </h1>
           <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
             Software Engineering student at Dire Dawa University specializing in building scalable full-stack web applications, multi-tenant architectures, resilient REST APIs, and normalized relational database systems.
@@ -31,16 +32,22 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           <div className="lg:col-span-4 flex justify-center">
-            <div className="relative w-full max-w-sm rounded-2xl p-1 bg-gradient-to-b from-brand-500/40 via-surface-200 to-transparent shadow-2xl">
-              <div className="rounded-[14px] overflow-hidden bg-surface-50">
-                <Image
-                  src="/profile.jpg"
-                  alt="Nasir Amme"
-                  width={400}
-                  height={460}
-                  priority
-                  className="w-full h-[400px] object-cover object-top"
-                />
+            <div className="relative w-full max-w-sm group">
+              {/* Golden Ambient Glow Behind Image */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-brand-500/20 to-amber-500/20 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+
+              <div className="relative rounded-2xl p-1 bg-gradient-to-br from-brand-300 via-brand-600/50 to-surface-200 shadow-[0_0_30px_rgba(223,156,27,0.15)] group-hover:shadow-[0_0_40px_rgba(223,156,27,0.3)] transition-all duration-500">
+                <div className="relative rounded-[14px] overflow-hidden bg-surface-50">
+                  <Image
+                    src="/profile.jpg"
+                    alt="Nasir Amme"
+                    width={400}
+                    height={460}
+                    priority
+                    className="w-full h-[400px] object-cover object-top filter contrast-[1.02] saturate-[1.05] group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent opacity-60 mix-blend-multiply" />
+                </div>
               </div>
             </div>
           </div>
