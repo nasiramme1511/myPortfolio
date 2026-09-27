@@ -1,121 +1,172 @@
-# 🌐 Nasir Amme — Professional Portfolio Website
+# 🌐 Nasir Amme — Full-Stack Software Engineer Portfolio & Case Studies
 
-This is my personal portfolio website showcasing my skills, projects, and experience as a **Full Stack Developer & Software Engineer**.
-The portfolio highlights real-world projects built using modern web technologies with a strong focus on clean UI, usability, and performance.
+[![Production Build & Verification](https://github.com/nasiramme1511/myPortfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/nasiramme1511/myPortfolio/actions)
+![Next.js](https://img.shields.io/badge/Next.js-14.2-black?style=flat&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.5-blue?style=flat&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38bdf8?style=flat&logo=tailwind-css)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
 
-## 🚀 Live Website
-👉 http://localhost:8000 (for local development)
+> **Professional Positioning**: *"Building modern, secure, scalable and production-ready web applications."*
 
-## 📸 Preview
-![Portfolio Screenshot](profile.jpg)
+This repository houses the personal full-stack software engineering portfolio and system architecture showcase for **Nasir Amme Siraj** — Software Engineering student at **Dire Dawa University** and Junior Web Developer intern alumnus at **Afronex Tech Hub**.
 
-## ✨ Features
-- **Modern, responsive design** (mobile-first) with upgraded UI/UX
-- **Smooth animations and transitions** with enhanced visual effects
-- **Loading overlay animation** with custom spinner
-- **Sticky navigation** with active link highlighting
-- **Interactive service cards** with enhanced hover effects
-- **Comprehensive skills section** with categorized tech stack and animated progress bars
-- **Project showcase** with real links and images
-- **Functional contact form** with Netlify Forms integration
-- **Scroll-to-top button** with smooth animation
-- **Professional footer** with expanded social links
-- **CV download option**
-- **Clean and modern UI/UX** with upgraded color scheme
+---
 
-## 🎨 Upgraded UI/UX Features
-- **Modern Color Palette**: Vibrant blues (#4361ee), deep purples (#3a0ca3), and accent colors (#f72585)
-- **Enhanced Gradients**: Sophisticated gradient effects throughout the design
-- **Improved Typography**: Better font hierarchy and readability
-- **Card Designs**: Enhanced cards with better depth and visual hierarchy
-- **Button Styles**: Multiple button variations (primary, secondary, accent, outline)
-- **Animations**: Smooth entrance animations and interactive hover states
-- **Visual Elements**: Enhanced shadows, borders, and spacing for better visual appeal
+## ⚡ Key Highlights & Features
 
-## 🧠 Featured Projects
-- **School Management System**
-  Comprehensive frontend solution for schools with role-based dashboards for administrators, teachers, and students. Features include attendance tracking, grade management, and communication tools.
-- **Advanced Quiz App**
-  Interactive quiz application with timer, scoring system, and multiple categories. Features include progress tracking, difficulty levels, and performance analytics.
-- **Alarm Clock Application**
-  Feature-rich alarm clock with multiple alarms, sound customization, and sleep tracking. Includes a stopwatch and timer functionality with intuitive UI.
+- **Modern Dark-First Engineering Aesthetic**: Clean visual hierarchy, code-inspired typography, subtle micro-interactions, and accessible high-contrast UI (no generic templates or fake percentage bars).
+- **In-Depth Architectural Case Studies**: Complete technical breakdowns for **OMMS** (Multi-tenant management system), **MCMS** (Financial fee engine & bulk Excel stream parser), and **Sheikh Muhammed Zabuur** (Media archive platform).
+- **Dedicated Engineering Specification Page (`/engineering`)**: Transparent documentation on frontend layering, backend MVC services, relational database normalization (3NF), JWT/RBAC security guards, testing strategies, performance Web Vitals tuning, and DevOps CI/CD pipelines.
+- **Server-Side Validated Contact System**: Secure Next.js API endpoint (`/api/contact`) with Zod schema validation, input sanitization, and rate-limit defense.
+- **Cached GitHub Integration (`/api/github`)**: Server-side fetch with Next.js revalidation cache (`revalidate: 3600`) displaying verified public repositories without exposing private API keys.
+- **Preserved Authentic CV & Profile Assets**: Direct web view and download trigger for `Nasir_Amme_CV.pdf` and real profile photo.
+- **100% SEO & Accessibility Ready**: Complete OpenGraph, Twitter card metadata, dynamic XML `sitemap.ts`, `robots.ts`, semantic landmarks, and keyboard focus states.
+
+---
 
 ## 🛠 Tech Stack
-- **HTML5** – Semantic markup
-- **CSS3** – Flexbox, Grid, animations, responsive design, custom properties
-- **JavaScript (ES6)** – DOM manipulation, event handling, form validation
-- **Font Awesome** – Icons
-- **Google Fonts** – Typography (Inter font family)
-- **Netlify Forms** – Contact form handling
-- **Local Server** – Development & hosting
 
-## 📂 Project Structure
-```
+### Frontend
+- **Framework**: [Next.js 14 (App Router)](https://nextjs.org)
+- **Language**: [TypeScript (Strict Mode)](https://www.typescriptlang.org)
+- **UI & Styling**: [React 18](https://react.dev), [Tailwind CSS](https://tailwindcss.com), [Lucide Icons](https://lucide.dev)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+
+### Backend & Integrations
+- **API Engine**: Next.js App Router Server Routes
+- **Validation**: [Zod Schema Validation](https://zod.dev)
+- **Integrations**: GitHub REST API v3 (Cached)
+
+### Quality & Deployment
+- **Testing**: [Vitest](https://vitest.dev), [React Testing Library](https://testing-library.com)
+- **CI/CD**: GitHub Actions (`.github/workflows/ci.yml`)
+- **Deployment**: Vercel Ready (`vercel.json`)
+
+---
+
+## 📐 Architecture & Folder Structure
+
+```text
 myPortfolio/
-├── modern_portfolio.html
-├── modern_styles.css
-├── modern_script.js
-├── profile.jpg
-├── Nasir_Amme_CV.pdf
-├── README.md
-├── package.json
-└── images/
-    ├── alarm-clock.png
-    ├── quiz-app.png
-    └── school-system.png
+├── app/
+│   ├── api/
+│   │   ├── contact/route.ts      # Server-side Zod form validation
+│   │   └── github/route.ts       # Cached GitHub stats proxy
+│   ├── about/page.tsx            # Journey & DDU Education details
+│   ├── blog/                     # Technical articles & dynamic [slug]
+│   ├── contact/page.tsx          # Contact view
+│   ├── engineering/page.tsx      # System architecture & specs
+│   ├── experience/page.tsx       # Afronex Tech Hub internship timeline
+│   ├── projects/                 # Systems showcase & case studies [slug]
+│   ├── resume/page.tsx           # Interactive web resume + PDF download
+│   ├── skills/page.tsx           # Tech stack & learning direction
+│   ├── globals.css               # Tailwind directives & focus states
+│   ├── layout.tsx                # Root layout, metadata & fonts
+│   ├── page.tsx                  # Homepage
+│   ├── robots.ts                 # Dynamic robots.txt
+│   └── sitemap.ts                # Dynamic XML sitemap
+├── components/
+│   ├── AboutSection.tsx          # Background summary component
+│   ├── ContactForm.tsx           # Interactive contact form
+│   ├── Footer.tsx                # Sitemap & social footer
+│   ├── Hero.tsx                  # Hero section with CTA buttons
+│   ├── Navbar.tsx                # Sticky navbar & mobile drawer
+│   ├── ProjectCard.tsx           # Project card component
+│   └── SkillsGrid.tsx            # Categorized skills matrix
+├── lib/
+│   ├── data/
+│   │   ├── blog.ts               # Technical articles dataset
+│   │   ├── engineering.ts        # Architecture & security specifications
+│   │   ├── profile.ts            # Profile dataset
+│   │   └── projects.ts           # Case studies dataset
+│   └── github.ts                 # Server-side GitHub API client
+├── public/
+│   ├── profile.jpg               # Official profile photo
+│   └── Nasir_Amme_CV.pdf         # Official PDF Resume
+├── tests/
+│   └── portfolio.test.tsx        # Vitest component & data tests
+├── .github/workflows/ci.yml      # CI pipeline script
+├── next.config.js                # Next.js security headers & image config
+├── tailwind.config.js            # Design tokens & color system
+├── tsconfig.json                 # TypeScript strict compiler options
+├── vercel.json                   # Vercel deployment manifest
+└── package.json                  # Scripts & dependencies
 ```
 
-## 🚀 How to Run Locally
-1. Clone or download this repository
-2. Install dependencies:
+---
+
+## 🚀 Local Development Setup
+
+### Prerequisites
+- **Node.js**: v18.0.0 or higher
+- **npm**: v9.0.0 or higher
+
+### Steps
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/nasiramme1511/myPortfolio.git
+   cd myPortfolio
+   ```
+
+2. **Install dependencies**:
    ```bash
    npm install
    ```
-3. Start the development server:
-   ```bash
-   npm start
-   ```
-   Or alternatively:
-   ```bash
-   python -m http.server 8000
-   ```
-4. Visit `http://localhost:8000` in your browser
 
-## 🖼️ Image Optimization
-For optimal performance, all images should be optimized before deployment:
-- Use WebP format when possible for better compression
-- Compress images using tools like TinyPNG or ImageOptim
-- Implement lazy loading for images below the fly
-- Use appropriate dimensions to avoid scaling
-
-## 📦 Deployment
-### Deploy to GitHub Pages
-1. Make sure you have Git initialized in your project
-2. Run the following command to deploy:
+3. **Configure Environment Variables (Optional)**:
+   Copy `.env.example` to `.env.local`:
    ```bash
-   npm run deploy
+   cp .env.example .env.local
    ```
 
-### Deploy to Netlify
-1. Push your code to a GitHub repository
-2. Go to [Netlify](https://netlify.com) and connect your GitHub account
-3. Select your repository and click "Deploy"
+4. **Start local development server**:
+   ```bash
+   npm run dev
+   ```
+   Open `http://localhost:3000` in your browser.
 
-### Manual Deployment
-1. Upload all files to your web server
-2. Ensure all paths are relative for proper loading
+---
 
-## 📄 CV Access
-My detailed CV is available in the portfolio and as a direct download: [Nasir_Amme_CV.pdf](Nasir_Amme_CV.pdf)
+## 🧪 Testing & Verification Scripts
 
-## 🤝 Connect with Me
-- LinkedIn: [Nasir Amme](https://linkedin.com/in/nasiramme1511)
-- GitHub: [nasiramme1511](https://github.com/nasiramme1511)
-- Twitter: [nasiramme1511](https://twitter.com/nasiramme1511)
-- Personal Site: [nasiramme1511.dev](https://nasiramme1511.dev)
-- Telegram: [nasiramme1511](https://t.me/nasiramme1511)
-- YouTube: [NasirAmme-h4o](https://www.youtube.com/@NasirAmme-h4o)
-- Email: nasiramme1511@gmail.com
+- **Run Unit & Component Tests**:
+  ```bash
+  npm run test
+  ```
 
-## 📝 License
-This project is open source and available under the MIT License.
+- **Run TypeScript Type Checking**:
+  ```bash
+  npm run typecheck
+  ```
+
+- **Run ESLint Code Audit**:
+  ```bash
+  npm run lint
+  ```
+
+- **Production Build Test**:
+  ```bash
+  npm run build
+  ```
+
+---
+
+## 📦 Deployment Configuration
+
+This application is optimized for zero-config production deployment on **Vercel**:
+
+1. Import `nasiramme1511/myPortfolio` into your Vercel dashboard.
+2. Vercel automatically detects Next.js 14 settings from `package.json` and `vercel.json`.
+3. Optionally add `GITHUB_TOKEN` in Vercel environment variables for higher GitHub API rate limits.
+4. Click **Deploy**.
+
+---
+
+## 📄 License & Contact
+
+- **Author**: Nasir Amme Siraj
+- **Email**: nasiramme1511@gmail.com
+- **LinkedIn**: [linkedin.com/in/nasir-amme-9a29a7340](https://www.linkedin.com/in/nasir-amme-9a29a7340)
+- **GitHub**: [github.com/nasiramme1511](https://github.com/nasiramme1511)
+- **License**: [MIT License](LICENSE)
