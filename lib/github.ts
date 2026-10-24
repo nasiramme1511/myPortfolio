@@ -47,7 +47,7 @@ export async function fetchGitHubStats(): Promise<{ stats: GitHubUserStats; repo
       id: 2,
       name: "mcms",
       description: "Membership Fee Management System featuring bulk Excel imports, audit logs, and Groq AI queries.",
-      htmlUrl: "https://github.com/nasiramme1511/mcms",
+      htmlUrl: "https://github.com/nasiramme1511/Membership-Fee-Management-System",
       homepage: null,
       stargazersCount: 4,
       forksCount: 1,
