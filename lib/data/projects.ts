@@ -103,7 +103,7 @@ export const projectsData: Project[] = [
     title: "Membership Fee Management System",
     subtitle: "Financial tracking, bulk Excel processing, audit logging & AI assistant",
     description: "A specialized financial management application designed for organization treasurers to handle membership dues, perform large-scale Excel batch processing, log financial audits, support multilingual interfaces, and query records with an AI assistant.",
-    githubUrl: "https://github.com/nasiramme1511/mcms",
+    githubUrl: "https://github.com/nasiramme1511/Membership-Fee-Management-System",
     liveUrl: undefined,
     featured: true,
     technologies: ["React", "TypeScript", "Node.js", "Express", "MySQL", "Sequelize ORM", "ExcelJS", "i18next", "Groq AI"],
